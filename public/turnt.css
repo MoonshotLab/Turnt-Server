@@ -1,0 +1,29 @@
+body{
+  background-color: rgba(0,0,0,.9);
+  color: white;
+  font-family: 'Helvetica';
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+
+video{
+  margin-bottom: 7px;
+}
+
+
+/* Share Controls */
+share-button{
+  display: block !important;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  color: black;
+  font-family: Helvetica;
+  background: rgba(255, 255, 255, .8);
+}
+share-button:hover{
+  background: rgba(255, 255, 255, 1);
+}
+share-button:before{
+  background: none;
+}

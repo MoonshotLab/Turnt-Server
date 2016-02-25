@@ -11,6 +11,8 @@
   "dependencies": {
     "async": "^1.5.2",
     "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "mailgun-js": "^0.7.7",
     "mongodb": "^2.1.7",
     "twilio": "^2.9.0",
     "validator": "^5.0.0"

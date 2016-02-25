@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Turnt
+    
+    meta(name='viewport', content='width=device-width, user-scalable=no')
+    meta(name='og:title', content='Turnt')
+    meta(name='og:description', content='Get Turnt!')
+    meta(name='og:type', content='video.other')
+    meta(name='og:image', content= s3Path + '/' + guid + '.jpg')
+    
+    link(rel='stylesheet', href='/share-button.min.css')
+    link(rel='stylesheet', href='/turnt.css')
+    
+    script(src='/share-button.min.js')
+
+
+  body
+
+    video(width='100%' poster= s3Path + '/' + guid + '.jpg' controls)
+      source(src= s3Path + '/' + guid + '.mp4')
+      source(src= s3Path + '/' + guid + '.webm')
+    
+    .share
+      share-button
+    
+    script.
+      new ShareButton();
