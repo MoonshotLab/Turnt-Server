@@ -3,6 +3,7 @@ var app       = express();
 var server    = require('http').createServer(app);
 var config    = require('./config')();
 var db        = require('./lib/db');
+var texter    = require('./lib/texter');
 
 // setup express
 app.use(express.static('public'));
@@ -23,6 +24,10 @@ app.post('/turnt/new', function(req, res){
       s3Id  : req.query.s3Id
     }).then(function(){
       res.sendStatus(200);
+      texter.sendURL({
+        phone : req.query.phone,
+        url   : config.ROOT_URL + '/turnt/' + req.query.s3Id
+      });
     });
   }
 });

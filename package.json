@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4",
-    "mongodb": "^2.1.7"
+    "mongodb": "^2.1.7",
+    "twilio": "^2.9.0"
   }
 }
