@@ -4,6 +4,7 @@ var server    = require('http').createServer(app);
 var config    = require('./config')();
 var db        = require('./lib/db');
 var texter    = require('./lib/texter');
+var routes    = require('./lib/routes');
 
 // setup express
 app.use(express.static('public'));
@@ -12,6 +13,8 @@ server.listen(process.env.PORT || '3002');
 app.get('/turnt/:id', function(req, res){
   res.send({ id : req.params.id });
 });
+
+app.post('/text-message', routes.newTextMessageReceived);
 
 // required query params
   // s3Id   : the s3 id connecting the mp4, webm, and poster

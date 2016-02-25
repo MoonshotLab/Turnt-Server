@@ -9,8 +9,10 @@
   "author": "Joe Longstreet",
   "license": "MIT",
   "dependencies": {
+    "async": "^1.5.2",
     "express": "^4.13.4",
     "mongodb": "^2.1.7",
-    "twilio": "^2.9.0"
+    "twilio": "^2.9.0",
+    "validator": "^5.0.0"
   }
 }
