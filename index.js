@@ -11,6 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // routes
+app.get('/', function(req, res){ res.send('hi'); });
 app.get('/turnt/:id', routes.getTurnt);
 app.post('/text-message', routes.newTextMessageReceived);
 app.post('/turnt/new', routes.createTurnt);
