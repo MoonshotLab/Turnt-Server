@@ -4,8 +4,8 @@ html
     title Turnt
     
     meta(name='viewport', content='width=device-width, user-scalable=no')
-    meta(name='og:title', content='Turnt')
-    meta(name='og:description', content='Get Turnt!')
+    meta(name='og:title', content='Now Watch Me...')
+    meta(name='og:description', content='That one time I stepped into a remix video booth in Austin.')
     meta(name='og:type', content='video.other')
     meta(name='og:image', content= s3Path + '/' + guid + '.jpg')
     
@@ -25,4 +25,8 @@ html
       share-button
     
     script.
-      new ShareButton();
+      new ShareButton({
+        twitter : {
+          description : "That one time I stepped into a remix video booth at #SXSW2016. #myTAKE5"
+        }
+      });
