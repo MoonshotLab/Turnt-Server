@@ -14,6 +14,6 @@ app.set('view engine', 'jade');
 
 // routes
 app.get('/', routes.redirect);
-app.get('/turnt/:id', routes.getTurnt);
+app.get('/t/:id', routes.getTurnt);
 app.post('/text-message', routes.newTextMessageReceived);
 app.post('/turnt/new', routes.createTurnt);
