@@ -1,9 +1,15 @@
 body{
-  background-color: rgba(0,0,0,.9);
+  background-color: black;
   color: white;
   font-family: 'Helvetica';
   margin: 0 0 50px 0;
   padding: 0;
+}
+
+h1#logo{
+  background: url('/logo.png') no-repeat center center;
+  height: 90px;
+  background-size: contain;
 }
 
 video{
@@ -12,18 +18,31 @@ video{
 
 
 /* Share Controls */
-share-button{
-  display: block !important;
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  color: black;
-  font-family: Helvetica;
-  background: rgba(255, 255, 255, .8);
+.shares{
+  overflow: hidden;
 }
-share-button:hover{
-  background: rgba(255, 255, 255, 1);
+a.share{
+  margin-top: 15px;
+  height: 50px;
+  width: 32%;
+  text-indent: -9999px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
 }
-share-button:before{
-  background: none;
+a.share#facebook{
+  background-image: url('/facebook-button.png');
+}
+a.share#facebook:hover{
+  background-image: url('/facebook-button-active.png');
+}
+a.share#twitter{
+  background-image: url('/tweet-button.png');
+  margin-right: 12%;
+  margin-left: 12%;
+}
+a.share#twitter:hover{
+  background-image: url('/tweet-button-active.png');
 }
