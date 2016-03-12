@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Turnt
+    
+    meta(name='viewport', content='width=device-width, user-scalable=no')
+    link(rel='stylesheet', href='/turnt.css')
+
+  body
+    
+    h2
+      a(href='/turnts?offset=#{Number(offset) + 25}') Next Page
+  
+    each turnt in turnts
+      .turnt
+        h2= new Date(Number(turnt.s3Id))
+        
+        video(width='100%' poster= s3Path + '/' + turnt.s3Id + '.jpg' controls)
+          source(src= s3Path + '/' + turnt.s3Id + '.mp4')
+          source(src= s3Path + '/' + turnt.s3Id + '.webm')
+        a.source(target='_blank' href=s3Path + '/' + turnt.s3Id + '.mp4') Source
+    
+    h2
+      a(href='/turnts?offset=' offset + 25) Next Page
+    

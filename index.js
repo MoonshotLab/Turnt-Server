@@ -4,6 +4,7 @@ var bodyParser= require('body-parser');
 var app       = express();
 var server    = require('http').createServer(app);
 var routes    = require('./lib/routes');
+var utils     = require('./lib/utils');
 
 // setup express
 app.use(express.static('public'));
@@ -15,5 +16,6 @@ app.set('view engine', 'jade');
 // routes
 app.get('/', routes.redirect);
 app.get('/t/:id', routes.getTurnt);
+app.get('/turnts', utils.basicAuth, routes.getTurnts);
 app.post('/text-message', routes.newTextMessageReceived);
 app.post('/turnt/new', routes.createTurnt);

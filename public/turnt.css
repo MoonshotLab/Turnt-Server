@@ -46,3 +46,17 @@ a.share#twitter{
 a.share#twitter:hover{
   background-image: url('/tweet-button-active.png');
 }
+
+
+.turnt{
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+.turnt h2{
+  margin-left: 20px;
+}
+.turnt a.source{
+  float: right;
+  margin-right: 20px;
+  color: white;
+}
